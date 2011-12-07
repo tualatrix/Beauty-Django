@@ -1,0 +1,107 @@
+#upload{
+
+padding:0px;
+text-align:center;
+font-family: myfont;
+border-radius: 15px;
+width: 600px;
+height: 400px;
+background-color: black;
+box-shadow: 0px 0px 5px #888888;
+position:relative;
+top:70px;
+left:10px;
+}
+#nav{ 
+
+position:relative;
+margin-left:0;
+left:-20px;
+bottom:325px;
+text-align:left;
+
+}
+#uploadform
+{
+  color:white;
+  font-size: 40px;
+  position:relative;
+  top:50px;
+  left:-170px;
+}
+#nametext{
+  color:white;
+  font-size: 40px;
+  position:relative;
+
+}
+
+.textinput {
+border-radius: 20px;
+width: 300px;
+height: 40px;
+font-size: 30px;
+background-color: white;
+color: black;
+
+}
+.choosefile {
+  
+font-family: myfont;
+border-radius: 20px;
+width: 300px;
+font-size: 25px;
+background-color: white;
+color: black;
+position:relative;
+top:70px;
+left:-60px;
+
+}
+.uploadbtn {
+  
+font-family: myfont;
+border-radius: 20px;
+width: 300px;
+height: 40px;
+font-size: 30px;
+background-color: black;
+color: white;
+position:relative;
+top:120px;
+left:-70px;
+
+
+}
+#nameform
+{
+
+
+  position:relative;
+  top:-145px;
+  left:250px;
+  z-index:10;
+}
+
+#choose
+{
+  position:relative;
+  top:30px;
+  left:60px;
+  
+}
+#done
+{
+  position:relative;
+  top:-20px;
+  left:250px;
+}
+
+body {
+
+height:768px;
+background:url(background.png);
+background-size:100%;
+background-repeat:y-repeat;
+background-position:center center;
+}

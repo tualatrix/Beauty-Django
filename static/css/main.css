@@ -1,0 +1,21 @@
+@font-face
+{
+font-family: myfont;
+src: url('font.ttf');
+
+}
+* {
+padding:0;
+margin:0 auto;
+-moz-transition: all 0.2s ease 0s;
+-webkit-transition: all 0.2s ease 0s;
+transition: all 0.2s ease 0s;
+}
+body {
+
+height:768px;
+background:url(background.png);
+background-size:100%;
+background-repeat:no-repeat;
+background-position:center center;
+}
