@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django import forms
 import os.path
+from facebook.models import facebook
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
@@ -32,7 +33,6 @@ def vote(request):
 	girlA = '12.jpg'
 	a = 1
 	girlB = '4886691_orig.jpg'
-	print request
 	return render_to_response('vote.html',locals())
 	
 	
@@ -50,8 +50,21 @@ def upload(request):
 		f = request.FILES['image']
 
 		fn = f.name
+		print fn
+		name = facebook.objects.create(name = fn )
+		print name.name
+		aa = request.POST.values()
+		print aa[1]
+		
+		name.name = aa[1]
+		name.desc = aa[2]
+		
+		print name.name
+		print name.desc
+		name2 = facebook( name = 'kevin')
+		print name2.desc
+		
 				
-		print request
 		
 		destination = open( PROJECT_PATH +'/media/image/' + fn , 'w')
 		
