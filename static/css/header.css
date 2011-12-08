@@ -17,7 +17,7 @@ border-radius: 20px;
 width: 700px;
 height: 100px;
 background-color: #e7187f;
-box-shadow: 0px 0px 15px #888888;
+box-shadow: 0px 0px 20px #888888;
 color: white;
 position:relative;
 top:-30px;
@@ -29,7 +29,7 @@ border-radius: 20px;
 width: 690px;
 height: 100px;
 background-color: black;
-box-shadow: 0px 0px 5px #888888;
+box-shadow: 0px 0px px #888888;
 position:relative;
 top:-5px;
 }
@@ -40,7 +40,7 @@ border-radius: 20px;
 width: 90px;
 height: 100px;
 background-color: black;
-box-shadow: 0px 0px 5px #888888;
+box-shadow: 0px 0px 10px #888888;
 
 position:relative;
 top:-100px;
@@ -191,6 +191,12 @@ a:visited {text-decoration:none;color:white;}
 -o-transform: scale(1.2);  
 transform: scale(1.2);  
 } 
+.pic:hover {
+-moz-transform: scale(1.2); 
+-webkit-transform: scale(1.2);
+-o-transform: scale(1.2);  
+transform: scale(1.2);  
+} 
 .nav:hover{
 -moz-transform: rotate(30deg) scale(1.5);
 -webkit-transform: rotate(30deg)  scale(1.5);
@@ -204,3 +210,4 @@ transform: rotate(30deg) scale(1.5);
 -webkit-transform: rotate(-3deg) ;
 transform: rotate(-3deg);
 }
+

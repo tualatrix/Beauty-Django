@@ -1,0 +1,85 @@
+
+
+#girlA{
+
+border-radius: 20px;
+width: 200px;
+height: 300px;
+
+background-color: black;
+position:relative;
+top:100px;
+left:-200px;
+-moz-transform: rotate(-3deg) ;
+-webkit-transform: rotate(-3deg) ;
+transform: rotate(-3deg);
+z-index:10;
+
+}
+
+
+
+
+#girlB{
+
+border-radius: 20px;
+width: 200px;
+height: 300px;
+
+
+position:relative;
+top:-200px;
+left:200px;
+-moz-transform: rotate(3deg) ;
+-webkit-transform: rotate(3deg) ;
+transform: rotate(3deg);
+z-index:10;
+}
+
+#girlApic:hover{
+
+-moz-transform: scale(1.2); 
+-webkit-transform: scale(1.2);
+-o-transform: scale(1.2);  
+transform: scale(1.2); 
+
+
+}
+
+
+#girlBpic:hover{
+
+-moz-transform: scale(1.2); 
+-webkit-transform: scale(1.2);
+-o-transform: scale(1.2);  
+transform: scale(1.2); 
+
+}
+
+#nav{ 
+
+position:relative;
+margin-left:0;
+top:-510px;
+left:-20px;
+bottom:120px;
+text-align:left;
+
+}
+
+img{
+border-radius: 20px;
+box-shadow: 0px 0px 20px #888888;
+
+}
+
+body {
+
+height:768px;
+background:url(background.png);
+background-size:100%;
+background-repeat:y-repeat;
+background-position:center center;
+}
+
+

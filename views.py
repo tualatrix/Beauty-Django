@@ -10,6 +10,12 @@ def home(request):
 	return render_to_response('index.html',locals())
 
 
+def vote(request):
+	sitetitle = 'Beauty around Us'
+	headname = 'Beauty around Us'
+	girlA = '12.jpg'
+	girlB = '4886691_orig.jpg'
+	return render_to_response('vote.html',locals())
 	
 	
 def upload(request):
