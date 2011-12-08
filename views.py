@@ -7,14 +7,32 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 def home(request):
 	sitetitle = 'Beauty around Us'
 	headname = 'Beauty around Us'
+	print request
 	return render_to_response('index.html',locals())
 
+def votea(request):
+	sitetitle = 'Beauty around Us'
+	headname = 'Beauty around Us'
+	girlA = '12.jpg'
+	girlB = '4886691_orig.jpg'
+	print request
+	print request.path
+	print "--------"
+	print request.GET
+	print "--------"
+	print request.POST
+	print "--------"
+	if request.path == '/votea/':
+		print "it is "
+	return render_to_response('vote.html',locals())
 
 def vote(request):
 	sitetitle = 'Beauty around Us'
 	headname = 'Beauty around Us'
 	girlA = '12.jpg'
+	a = 1
 	girlB = '4886691_orig.jpg'
+	print request
 	return render_to_response('vote.html',locals())
 	
 	
@@ -33,7 +51,7 @@ def upload(request):
 
 		fn = f.name
 				
-		print fn
+		print request
 		
 		destination = open( PROJECT_PATH +'/media/image/' + fn , 'w')
 		
