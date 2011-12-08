@@ -8,5 +8,8 @@ class facebook(models.Model):
 	desc = models.CharField(max_length=100)
 	filename = models.CharField(max_length=40)
 	rates =  models.CharField(max_length=100)
+	
+	def __unicode__(self):
+		return self.name
 
 admin.site.register((facebook))
