@@ -59,6 +59,8 @@ def upload(request):
 		print name.desc
 		name2 = facebook( name = 'kevin')
 		print name2.desc
+		name2.desc = 'kevinkeivnkeivn'
+		name2.save()
 		
 				
 		
