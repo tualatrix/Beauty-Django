@@ -51,14 +51,10 @@ def upload(request):
 
 		fn = f.name
 		print fn
-		name = facebook.objects.create(name = fn )
-		print name.name
 		aa = request.POST.values()
 		print aa[1]
-		
-		name.name = aa[1]
-		name.desc = aa[2]
-		
+		name = facebook.objects.create(name = aa[1],desc=aa[2],filename=fn )
+
 		print name.name
 		print name.desc
 		name2 = facebook( name = 'kevin')
