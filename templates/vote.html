@@ -20,10 +20,14 @@ function alart(){
 <body>
 
 <aside id="girlA" class="pic">
-<a href="#" onclick="alart();" ><img src="/media/image/{{ girlA }}"  alt="girl"  height="100%"  id="girlApic" class="pic" /></a>
+<form NAME= "girlaforma" action="/votea/" enctype="multipart/form-data" method="post">
+<input name="{{ file }}" type="image" src="/media/image/{{ girlA }}"  alt="girla"  height="100%"  id="girlApic" class="pic"  onclick= "javascript:document.girlforma.submit() "  > 
+</form>
 </aside>
 <aside id="girlB" class="pic">
-<a href="#" onclick="alart();" ><img src="/media/image/{{ girlB }}"  alt="girl"  height="100%"  id="girlBpic" class="pic"/></a>
+<form NAME= "girlaformb" action="/voteb/" enctype="multipart/form-data" method="post">
+<input type="image" src="/media/image/{{ girlB }}"  alt="girlb"  height="100%"  id="girlApic" class="pic"  onclick= "javascript:document.girlformb.submit() "> 
+</form>
 </aside>
 
 

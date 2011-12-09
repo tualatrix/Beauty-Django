@@ -15,8 +15,7 @@ def home(request):
 def votea(request):
 	sitetitle = 'Beauty around Us'
 	headname = 'Beauty around Us'
-	girlA = '12.jpg'
-	girlB = '4886691_orig.jpg'
+	vote="A!"
 	print request
 	print request.path
 	print "--------"
@@ -24,9 +23,37 @@ def votea(request):
 	print "--------"
 	print request.POST
 	print "--------"
+	print request.POST.keys()[2]
+	what = request.POST.keys()[2]
+  
+	print what[0:-2]
+	voteid = what[0:-2]
+	votes = facebook.objects.get(id = voteid )
+	print votes.filename
+  #print what.split(".")
+	print what
+	print "--------"
+	print "--------"
 	if request.path == '/votea/':
 		print "it is "
-	return render_to_response('vote.html',locals())
+	return render_to_response('votea.html',locals())
+	
+def voteb(request):
+	sitetitle = 'Beauty around Us'
+	headname = 'Beauty around Us'
+	vote = "B!"
+	print request
+	print request.path
+	print "--------"
+	print request.GET
+	print "--------"
+	print request.POST
+	print "--------"
+	print request.POST.values()
+	print "--------"
+	if request.path == '/voteb/':
+		print "it is "
+	return render_to_response('votea.html',locals())
 
 def vote(request):
 	sitetitle = 'Beauty around Us'
@@ -42,6 +69,9 @@ def vote(request):
 		num2 = random.randint(0,all)
 	name = facebook.objects.get(id = list[num].id)
 	name2 = facebook.objects.get(id = list[num2].id)
+	print name.id
+	print name2.id
+	file = str(name.id)
 	girlA = str(name.filename)
 	girlB = str(name2.filename)
 	return render_to_response('vote.html',locals())
