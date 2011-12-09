@@ -2,6 +2,7 @@ from django.shortcuts import render_to_response
 from django import forms
 import os.path
 from facebook.models import facebook
+import random
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
@@ -30,9 +31,20 @@ def votea(request):
 def vote(request):
 	sitetitle = 'Beauty around Us'
 	headname = 'Beauty around Us'
-	girlA = '12.jpg'
-	a = 1
-	girlB = '4886691_orig.jpg'
+	list = facebook.objects.order_by('id')
+	all = 0
+	for i in list:
+		all = all+1
+	print all
+	all = all-1
+	num = random.randint(0,all)
+	num2 = random.randint(0,all)
+	while num2 == num:
+		num2 = random.randint(0,all)
+	name = facebook.objects.get(id = list[num].id)
+	name2 = facebook.objects.get(id = list[num2].id)
+	girlA = str(name.filename)
+	girlB = str(name2.filename)
 	return render_to_response('vote.html',locals())
 	
 	
@@ -57,10 +69,7 @@ def upload(request):
 
 		print name.name
 		print name.desc
-		name2 = facebook( name = 'kevin')
-		print name2.desc
-		name2.desc = 'kevinkeivnkeivn'
-		name2.save()
+
 		
 				
 		
