@@ -32,11 +32,10 @@ def vote(request):
 	sitetitle = 'Beauty around Us'
 	headname = 'Beauty around Us'
 	list = facebook.objects.order_by('id')
-	all = 0
+	all = -1
 	for i in list:
 		all = all+1
 	print all
-	all = all-1
 	num = random.randint(0,all)
 	num2 = random.randint(0,all)
 	while num2 == num:
