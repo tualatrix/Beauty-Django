@@ -7,7 +7,7 @@ class facebook(models.Model):
 	name = models.CharField(max_length=30)
 	desc = models.CharField(max_length=100)
 	filename = models.CharField(max_length=40)
-	rates =  models.CharField(max_length=100)
+	rates =  models.IntegerField(max_length=100)
 	
 	def __unicode__(self):
 		return self.name

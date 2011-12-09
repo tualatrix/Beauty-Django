@@ -30,6 +30,12 @@ def votea(request):
 	voteid = what[0:-2]
 	votes = facebook.objects.get(id = voteid )
 	print votes.filename
+
+	print votes.rates
+	print type(votes.rates)
+	votes.rates =  int(votes.rates) + 1
+	votes.save()
+	print type(votes.rates)
   #print what.split(".")
 	print what
 	print "--------"
@@ -94,7 +100,7 @@ def upload(request):
 		print fn
 		aa = request.POST.values()
 		print aa[1]
-		name = facebook.objects.create(name = aa[1],desc=aa[2],filename=fn )
+		name = facebook.objects.create(name = aa[1],desc=aa[2],filename=fn,rates=0 )
 
 		print name.name
 		print name.desc
