@@ -3,7 +3,7 @@
 <script type="text/javascript">
 function alart(){
 	
-	alert('hello thank you for choose me');
+	alert('Hello thanks a lot for choosing me ^^');
 	
 	}
 </script>
@@ -20,13 +20,13 @@ function alart(){
 <body>
 
 <aside id="girlA" >
-<form NAME= "girlaforma" action="/votea/" enctype="multipart/form-data" method="post">
-<input name="fileid" value = "{{ file }}" type="image" src="/media/image/{{ girlA }}"  alt="girla"  height="100%"  id="girlApic" class="pic"  onclick= "javascript:document.girlforma.submit() "  > 
+<form NAME= "girlaforma" action="/vote/" enctype="multipart/form-data" method="post">
+<input name="fileid" value = "{{ file }}" type="image" src="/media/image/{{ girlA }}"  alt="girla"  height="100%"  id="girlApic" class="pic"  onclick= "alart(); "  > 
 </form>
 </aside>
 <aside id="girlB" >
-<form NAME= "girlaformb" action="/voteb/" enctype="multipart/form-data" method="post">
-<input type="image" src="/media/image/{{ girlB }}"  alt="girlb"  height="100%"  id="girlApic" class="pic"  onclick= "javascript:document.girlformb.submit() "> 
+<form NAME= "girlaformb" action="/vote/" enctype="multipart/form-data" method="post">
+<input name="fileid2" value = "{{ file2 }}" type="image" src="/media/image/{{ girlB }}"  alt="girlb"  height="100%"  id="girlApic" class="pic"  onclick= "alart();"  > 
 </form>
 </aside>
 

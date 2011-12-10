@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response,redirect
 from django import forms
 import os.path
 from facebook.models import facebook
@@ -10,77 +10,59 @@ def home(request):
 	sitetitle = 'Beauty around Us'
 	headname = 'Beauty around Us'
 	print request
-	return render_to_response('index.html',locals())
-
-def votea(request):
-	sitetitle = 'Beauty around Us'
-	headname = 'Beauty around Us'
-	
-	print request
-	print request.path
-	print "--------"
-	print request.GET
-	print "--------"
-	print request.POST
-	print "--------"
-	print request.POST.values()
-	print request.POST['fileid']
-	
-  
-	whatid = request.POST['fileid']
-	votes = facebook.objects.get(id = whatid )
-	print votes.filename
-
-	print votes.rates
-	print type(votes.rates)
-	votes.rates =  int(votes.rates) + 1
-	votes.save()
-	print type(votes.rates)
-  #print what.split(".")
-	print "--------"
-	print "--------"
-	vote = "hello"
-	if request.path == '/votea/':
-		print "it is "
-	return render_to_response('votea.html',locals())
-	
-def voteb(request):
-	sitetitle = 'Beauty around Us'
-	headname = 'Beauty around Us'
-	vote = "B!"
-	print request
-	print request.path
-	print "--------"
-	print request.GET
-	print "--------"
-	print request.POST
-	print "--------"
-	print request.POST.values()
-	print "--------"
-	if request.path == '/voteb/':
-		print "it is "
-	return render_to_response('votea.html',locals())
+	return render_to_response('index.html',locals())	
 
 def vote(request):
 	sitetitle = 'Beauty around Us'
 	headname = 'Beauty around Us'
-	list = facebook.objects.order_by('id')
-	all = -1
-	for i in list:
-		all = all+1
-	print all
-	num = random.randint(0,all)
-	num2 = random.randint(0,all)
-	while num2 == num:
+	if 'fileid' in request.POST:
+		whatid = request.POST['fileid']
+		votes = facebook.objects.get(id = whatid )
+		print type(votes.rates)
+		votes.rates =  int(votes.rates) + 1
+		vote = str(votes.rates)
+		votes.save()
+		print type(votes.rates)
+	  #print what.split(".")
+		print "--------a"
+		print "--------"
+		vote = "has "+ vote +" votes"
+		return redirect('/vote/')
+	elif 'fileid2' in request.POST:
+		whatid = request.POST['fileid2']
+		votes = facebook.objects.get(id = whatid )
+		print votes.filename
+	
+		print votes.rates
+		print type(votes.rates)
+		votes.rates =  int(votes.rates) + 1
+		vote = str(votes.rates)
+		votes.save()
+		print type(votes.rates)
+	  #print what.split(".")
+		print "--------b"
+		print "--------"
+		vote = "has "+vote+" votes"
+		return redirect('/vote/')
+	else:
+		list = facebook.objects.order_by('id')
+		all = -1
+		for i in list:
+			all = all+1
+		print all
+		num = random.randint(0,all)
 		num2 = random.randint(0,all)
-	name = facebook.objects.get(id = list[num].id)
-	name2 = facebook.objects.get(id = list[num2].id)
-	print name.id
-	print name2.id
-	file = str(name.id)
-	girlA = str(name.filename)
-	girlB = str(name2.filename)
-	return render_to_response('vote.html',locals())
+		while num2 == num:
+			num2 = random.randint(0,all)
+		name = facebook.objects.get(id = list[num].id)
+		name2 = facebook.objects.get(id = list[num2].id)
+		print name.id
+		print name2.id
+		file = str(name.id)
+		file2 = str(name2.id)
+		girlA = str(name.filename)
+		girlB = str(name2.filename)
+		return render_to_response('vote.html',locals())
 	
 	
 def upload(request):
