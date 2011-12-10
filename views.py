@@ -15,7 +15,7 @@ def home(request):
 def votea(request):
 	sitetitle = 'Beauty around Us'
 	headname = 'Beauty around Us'
-	vote="A!"
+	
 	print request
 	print request.path
 	print "--------"
@@ -23,12 +23,12 @@ def votea(request):
 	print "--------"
 	print request.POST
 	print "--------"
-	print request.POST.keys()[2]
-	what = request.POST.keys()[2]
+	print request.POST.values()
+	print request.POST['fileid']
+	
   
-	print what[0:-2]
-	voteid = what[0:-2]
-	votes = facebook.objects.get(id = voteid )
+	whatid = request.POST['fileid']
+	votes = facebook.objects.get(id = whatid )
 	print votes.filename
 
 	print votes.rates
@@ -37,9 +37,9 @@ def votea(request):
 	votes.save()
 	print type(votes.rates)
   #print what.split(".")
-	print what
 	print "--------"
 	print "--------"
+	vote = "hello"
 	if request.path == '/votea/':
 		print "it is "
 	return render_to_response('votea.html',locals())

@@ -19,12 +19,12 @@ function alart(){
 </header>
 <body>
 
-<aside id="girlA" class="pic">
+<aside id="girlA" >
 <form NAME= "girlaforma" action="/votea/" enctype="multipart/form-data" method="post">
-<input name="{{ file }}" type="image" src="/media/image/{{ girlA }}"  alt="girla"  height="100%"  id="girlApic" class="pic"  onclick= "javascript:document.girlforma.submit() "  > 
+<input name="fileid" value = "{{ file }}" type="image" src="/media/image/{{ girlA }}"  alt="girla"  height="100%"  id="girlApic" class="pic"  onclick= "javascript:document.girlforma.submit() "  > 
 </form>
 </aside>
-<aside id="girlB" class="pic">
+<aside id="girlB" >
 <form NAME= "girlaformb" action="/voteb/" enctype="multipart/form-data" method="post">
 <input type="image" src="/media/image/{{ girlB }}"  alt="girlb"  height="100%"  id="girlApic" class="pic"  onclick= "javascript:document.girlformb.submit() "> 
 </form>
