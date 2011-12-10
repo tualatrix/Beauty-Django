@@ -3,6 +3,7 @@ from django.shortcuts import render_to_response,redirect
 from django import forms
 import os.path
 from facebook.models import facebook
+from users.models import users
 import random,string
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
@@ -22,21 +23,44 @@ def home(request):
 def vote(request):
 	sitetitle = 'Beauty around Us'
 	headname = 'Beauty around Us'
-	if 'fileid' in request.POST:
-		whatid = request.POST['fileid']
-		votes = facebook.objects.get(id = whatid )
-		votes.rates =  int(votes.rates) + 1
-		vote = str(votes.rates)
-		votes.save()
+	print request.META['PATH_INFO']
+	if '/votea/' == request.META['PATH_INFO']:
+		
+		username = request.COOKIES['csrftoken']
+		username = username[0:20]
+		choose = users.objects.get(name = username)
+		
+		print choose.filename
+		
+		girla = facebook.objects.get(id = choose.filename)
+		print girla.rates
+		print type(girla.rates)
+		girla.rates = int(girla.rates) + 1
+		girla.save()
+		
+		users(id = choose.id ).delete()
+		
+	#	name = facebook.objects.get(id = list[num].id)
+
+		print "okok"
 		return redirect('/vote/')
-	elif 'fileid2' in request.POST:
-		whatid = request.POST['fileid2']
-		votes = facebook.objects.get(id = whatid )
-		votes.rates =  int(votes.rates) + 1
-		vote = str(votes.rates)
-		votes.save()
+	elif '/voteb/' == request.META['PATH_INFO']:
+		username = request.COOKIES['csrftoken']
+		username = username[0:20]
+		choose = users.objects.get(name = username)
+		
+		print choose.filename
+		
+		girla = facebook.objects.get(id = choose.filename2)
+		print girla.rates
+		print type(girla.rates)
+		girla.rates = int(girla.rates) + 1
+		girla.save()
+		
+		users(id = choose.id ).delete()
 		return redirect('/vote/')
 	else:
+		print "ok"
 		list = facebook.objects.order_by('id')
 		all = facebook.objects.order_by('id').count()
 		all = all-1
@@ -50,6 +74,17 @@ def vote(request):
 		file2 = str(name2.id)
 		girlA = str(name.filename)
 		girlB = str(name2.filename)
+		
+		print request.COOKIES['csrftoken']
+		username = request.COOKIES['csrftoken']
+		username = username[0:20]
+		try:
+			choose = users.objects.get(name = username)
+			users(id = choose.id ).delete()
+		except:
+			print "ok"
+		user = users.objects.create(name = username,filename=file,filename2=file2)
+
 		return render_to_response('vote.html',locals())
 	
 	
@@ -82,4 +117,14 @@ def upload(request):
 		sitetitle = 'Beauty around Us'
 		headname = 'Beauty around Us'
 		return render_to_response('upload.html',locals())
+		
+		
+def about(request):
+		sitetitle = 'Beauty around Us'
+		headname = 'Beauty around Us'
+		return render_to_response('about.html',locals())
 
+def top(request):
+		sitetitle = 'Beauty around Us'
+		headname = 'Beauty around Us'
+		return render_to_response('about.html',locals())

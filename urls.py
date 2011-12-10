@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
-from usbeauty.views import home,upload,vote
+from usbeauty.views import home,upload,vote,about,top
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -9,6 +9,10 @@ urlpatterns = patterns('',
     url(r'^$', home),
     url(r'^upload/$', upload),
     url(r'^vote/$', vote),
+    url(r'^votea/$', vote),
+    url(r'^voteb/$', vote),
+    url(r'^about/$', about),
+    url(r'^top/$', top),
     #url(r'^votea/$', vote),
     #url(r'^voteb/$', vote),
    

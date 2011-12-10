@@ -2,19 +2,7 @@
 <link rel="stylesheet" href="/static/css/vote.css">
 <script type="text/javascript">
 function alart1(){
-	
 	alert('Thanks a lot for voting me ^^');
-	document.girlaforma.submit();
-
-	
-	}
-function alart2(){
-	
-	alert('Thanks a lot for voting me ^^');
-	document.girlaformb.submit();
-
-	
-	
 	}
 </script>
 </head>
@@ -23,24 +11,17 @@ function alart2(){
 <div id = "bigbong">
 
 <div id="girlA">
-<img src="/media/image/{{ girlA }}"  alt="girla"  height="90%"  id="girlpic"  onclick= "alart1();">
-<form NAME= "girlaforma" action="/vote/" enctype="multipart/form-data" method="post">
-<input name="fileid" value = "{{ file }}" type="image" style= "visibility:hidden ">
-</form>
-</div>
+<a href="/votea"><img src="/media/image/{{ girlA }}"  alt="girla"  height="90%"  id="girlpic" onclick="alart1();"></a>
 
+</div>
 <div id="girlB">
-
-<img src="/media/image/{{ girlB }}"  alt="girlb"  height="90%"  id="girlpic"  onclick= "alart2();"> 
-<form NAME= "girlaformb" action="/vote/" enctype="multipart/form-data" method="post">
-<input name="fileid2" value = "{{ file2 }}" type="image" style= "visibility:hidden "> 
-</form>
-
+<a href="/voteb"><img src="/media/image/{{ girlB }}"  alt="girlb"  height="90%"  id="girlpic" onclick="alart1();"></a>
 </div>
-
 
 {% include 'nav.html'%}
 </div> 
+
+
 </body>
 </html>
 
