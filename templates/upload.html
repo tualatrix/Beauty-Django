@@ -1,43 +1,33 @@
 {% include 'header.html' %}
 
-		<link rel="stylesheet" href="/static/css/upload.css">
+<link rel="stylesheet" href="/static/css/upload.css">
 
 
-	</head>
-	<body>
-		
-	<header id="banner" class="body">
-		<aside id="banner2">
-			<h1 id="titletext"><a href="/">{{ headname }}</a></h1>
-		</aside>
-		
-		<aside id="banner3">
-			<h1 class="bar3text">Jnmc</h1>
-		</aside>
-	</header>
-	
-	
-	<aside id="upload">
-		<aside id="uploadform">
-			<aside id="nametext">
-				<p>Name:</p>
-				<p>DESC.:</p>
-				<p>Photo:</p>
-			</aside>
-			<aside id="nameform">
-				<form action="/upload/" enctype="multipart/form-data" method="post">
-				<input name="girlname" class="textinput" type="text">
-				<input name="description" class="textinput" type="text">
-				<input name="image" multiple="multiple" class="choosefile" type="file">
-				<input value="Upload" class="uploadbtn" type="submit">
-				</form>
-			</aside>
-		</aside>
-	</aside>
+</head>
+
+{% include 'topbar.html' %}
+<div id = "bigbong">
+<div id="upload">
+<div id="uploadform">
+<div id="nametext">
+<p>Name:</p>
+<p>DESC.:</p>
+<p>Photo:</p>
+</div>
+<div id="nameform">
+<form action="/upload/" enctype="multipart/form-data" method="post">
+<input name="girlname" class="textinput" type="text">
+<input name="description" class="textinput" type="text">
+<input name="image" multiple="multiple" class="choosefile" type="file">
+<input value="Upload" class="uploadbtn" type="submit">
+</form>
+</div>
+</div>
+</div>
 
 
 {% include 'nav.html'%}
- 
+ </div>
 </body>
 
 

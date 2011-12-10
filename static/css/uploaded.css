@@ -16,25 +16,35 @@ left:10px;
 
 position:relative;
 margin-left:0;
-left:-20px;
+left:-18px;
 bottom:325px;
 text-align:left;
 
 }
 #uploadform
 {
+  text-align:center;
   color:white;
-  font-size: 80px;
+  font-size: 30px;
   position:relative;
-  top:150px;
+  top:30px;
+  width: 600px;
+  height: 300px;
+  z-index:10;
+
 
 }
+img{
+  border-radius: 5px;
+  border:8px solid white;
+  z-index:11;
 
+}
 body {
 
 height:768px;
 background:url(background.png);
 background-size:100%;
-background-repeat:y-repeat;
+background-repeat:repeat;
 background-position:center center;
 }

@@ -17,7 +17,7 @@ left:10px;
 position:relative;
 margin-left:0;
 left:-20px;
-bottom:325px;
+bottom:320px;
 text-align:left;
 
 }
@@ -102,6 +102,6 @@ body {
 height:768px;
 background:url(background.png);
 background-size:100%;
-background-repeat:y-repeat;
+background-repeat:repeat;
 background-position:center center;
 }

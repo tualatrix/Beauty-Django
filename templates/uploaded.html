@@ -1,32 +1,26 @@
 {% include 'header.html' %}
 
-		<link rel="stylesheet" href="/static/css/uploaded.css">
+<link rel="stylesheet" href="/static/css/uploaded.css">
 
 
-	</head>
-	<body>
-		
-	<header id="banner" class="body">
-		<aside id="banner2">
-			<h1 id="titletext"><a href="/">{{ headname }}</a></h1>
-		</aside>
-		
-		<aside id="banner3">
-			<h1 class="bar3text">Jnmc</h1>
-		</aside>
-	</header>
-	
-	
-	<aside id="upload">
-		<aside id="uploadform">
-        <p>Done!</p>
-			</aside>
-		</aside>
-	</aside>
+</head>
+{% include 'topbar.html' %}
+
+<div id = "bigbong">
+
+<div id="upload">
+<div id="uploadform">
+<a href="/vote"><img src="/media/image/{{ done }}"  alt="done"  height="100%" class="pic"></a>
+
+<p id = "uploadedtext"><a href="/vote">OK we get it</a></p>
+
+</div>
+</div>
+</div>
 
 
 {% include 'nav.html'%}
- 
+</div>
 </body>
 
 

@@ -1,4 +1,18 @@
+#bigbong{
+position:relative;
+top:10px;
 
+}
+#about{
+text-align:center;
+color: white;
+font-size: 20px;
+z-index:1;
+position:relative;
+top:36px;
+font-family: myfont;
+text-shadow: 0px 0px 2px #ffffff;
+}
 
 .bar3text{
   
@@ -22,6 +36,10 @@ color: white;
 position:relative;
 top:-30px;
 }
+#topcup{
+width: 1000px;
+height: 100px;
+}
 #banner2{
 text-align:center;
 font-family: myfont;
@@ -33,6 +51,7 @@ box-shadow: 0px 0px px #888888;
 position:relative;
 top:-5px;
 }
+
 #banner3{
 text-align:center;
 font-family: myfont;
@@ -41,12 +60,12 @@ width: 90px;
 height: 100px;
 background-color: black;
 box-shadow: 0px 0px 10px #888888;
-
 position:relative;
-top:-100px;
+top:-130px;
 left:400px;
-z-index:-1;
+z-index:-2;
 }
+
 #titletext{
 color: white;
 font-size: 40px;
@@ -102,16 +121,7 @@ top:25px;
 font-family: myfont;
 text-shadow: 0px 0px 1px #ffffff;
 }
-#about{
-text-align:center;
-color: white;
-font-size: 20px;
-z-index:1;
-position:relative;
-top:36px;
-font-family: myfont;
-text-shadow: 0px 0px 2px #ffffff;
-}
+
 
 #nav{ 
 
@@ -120,6 +130,7 @@ margin-left:0;
 left:-20px;
 bottom:120px;
 text-align:left;
+width:100px;
 
 }
 #nav1{ 

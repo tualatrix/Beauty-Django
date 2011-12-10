@@ -18,34 +18,26 @@ function alart2(){
 	}
 </script>
 </head>
-<header id="banner" class="body">
-<aside id="banner2">
+{% include 'topbar.html' %}
 
-<h1 id="titletext"><a href="/">{{ headname }}</a></h1>
-</aside>
-<aside id="banner3" class="banner3">
-<h1 class="bar3text">Jnmc</h1>
-</aside>
-</header>
-<body>
-
-<aside id="girlA">
-<img src="/media/image/{{ girlA }}"  alt="girla"  height="100%"  id="girlApic" class="pic"  onclick= "alart1(); "  > 
+<div id = "bigbong">
+<div id="girlA">
+<img src="/media/image/{{ girlA }}"  alt="girla"  height="90%"  id="girlpic"  onclick= "alart1() "  >
 <form NAME= "girlaforma" action="/vote/" enctype="multipart/form-data" method="post">
 <input name="fileid" value = "{{ file }}" type="image" style= "visibility:hidden ">
 </form>
-</aside>
-<aside id="girlB">
-<img src="/media/image/{{ girlB }}"  alt="girlb"  height="100%"  id="girlApic" class="pic"  onclick= "alart2();"  > 
+</div>
+<div id="girlB">
+<img src="/media/image/{{ girlB }}"  alt="girlb"  height="90%"  id="girlpic"  onclick= "alart2()"  > 
 <form NAME= "girlaformb" action="/vote/" enctype="multipart/form-data" method="post">
 <input name="fileid2" value = "{{ file2 }}" type="image" style= "visibility:hidden "> 
 </form>
-</aside>
+</div>
 
 
 {% include 'nav.html'%}
 
- 
+</div> 
 </body>
 </html>
 

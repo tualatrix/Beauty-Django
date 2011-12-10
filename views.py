@@ -3,8 +3,16 @@ from django.shortcuts import render_to_response,redirect
 from django import forms
 import os.path
 from facebook.models import facebook
-import random
+import random,string
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
+
+import random,string
+def random_word(num):
+    w= ''
+    seed = string.letters + string.digits
+    for i in xrange(num):
+        w+= seed[random.randrange(1,len(seed))] 
+    return w
 
 def home(request):
 	sitetitle = 'Beauty around Us'
@@ -54,10 +62,9 @@ def upload(request):
 	if request.method == 'POST':
 		sitetitle = 'Beauty around Us'
 		headname = 'Beauty around Us'
-		print request.FILES['image']	
+		print request.FILES
 		f = request.FILES['image']
-		fn = f.name
-		print fn
+		fn = random_word(20)
 		aa = request.POST['girlname']
 		bb = request.POST['description']
 		name = facebook.objects.create(name = aa,desc=bb,filename=fn,rates=0 )
@@ -65,6 +72,7 @@ def upload(request):
 		for chunk in f.chunks():
 			destination.write(chunk)
 		destination.close()
+		done = str(fn)
 		return render_to_response('uploaded.html',locals())
 		
 		

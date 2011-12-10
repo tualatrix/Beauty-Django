@@ -10,6 +10,7 @@ margin:0 auto;
 -moz-transition: all 0.2s ease 0s;
 -webkit-transition: all 0.2s ease 0s;
 transition: all 0.2s ease 0s;
+
 }
 body {
 
@@ -19,3 +20,230 @@ background-size:100%;
 background-repeat:no-repeat;
 background-position:center center;
 }
+#bigbong{
+position:relative;
+top:10px;
+
+}
+#about{
+text-align:center;
+color: white;
+font-size: 20px;
+z-index:1;
+position:relative;
+top:36px;
+font-family: myfont;
+text-shadow: 0px 0px 2px #ffffff;
+}
+
+.bar3text{
+  
+color: white;
+font-size: 20px;
+position:relative;
+top:50px;
+text-shadow: 0px 0px 1px #ffffff;
+z-index:-1;
+overflow:hidden;
+  
+}
+#banner{
+text-align:center;
+font-family: myfont;
+border-radius: 20px;
+width: 700px;
+height: 100px;
+background-color: #e7187f;
+box-shadow: 0px 0px 20px #888888;
+color: white;
+position:relative;
+top:-30px;
+}
+#topcup{
+width: 1000px;
+height: 80px;
+overflow:hidden;
+}
+#banner2{
+text-align:center;
+font-family: myfont;
+border-radius: 20px;
+width: 690px;
+height: 100px;
+background-color: black;
+box-shadow: 0px 0px px #888888;
+position:relative;
+top:-5px;
+}
+
+#banner3{
+text-align:center;
+font-family: myfont;
+border-radius: 20px;
+width: 90px;
+height: 100px;
+background-color: black;
+box-shadow: 0px 0px 10px #888888;
+position:relative;
+top:-130px;
+left:400px;
+z-index:-2;
+overflow:hidden;
+}
+
+#titletext{
+color: white;
+font-size: 40px;
+position:relative;
+top:40px;
+text-shadow: 0px 0px 1px #ffffff;
+}
+#bannerdraw{
+width: 690px;
+height: 100px;
+position:relative;
+top:100px;
+}
+
+#vote{
+text-align:center;
+border-radius: 20px;
+width: 200px;
+height: 100px;
+background-color: black;
+box-shadow: 0px 0px 20px #888888;
+position:relative;
+top:160px;
+left:-200px;
+
+}
+#upload{
+text-align:center;
+border-radius: 20px;
+width: 200px;
+height: 100px;
+background-color: black;
+box-shadow: 0px 0px 20px #888888;
+position:relative;
+top:58px;
+left:200px;
+}
+#votetext{
+font-family: myfont;
+color: white;
+font-size: 40px;
+z-index:1;
+position:relative;
+top:25px;
+text-shadow: 0px 0px 1px #ffffff;
+}
+#uploadtext{
+color: white;
+font-size: 40px;
+z-index:1;
+position:relative;
+top:25px;
+font-family: myfont;
+text-shadow: 0px 0px 1px #ffffff;
+}
+
+
+#nav{ 
+
+position:relative;
+margin-left:0;
+left:-20px;
+bottom:120px;
+text-align:left;
+width:100px;
+
+}
+#nav1{ 
+
+position:relative;
+margin-left:0;
+border-radius: 50px;
+width: 100px;
+height: 100px;
+background-color: black;
+
+
+}
+#nav2{ 
+
+position:relative;
+top:-10px;
+margin-left:0;
+border-radius: 50px;
+width: 100px;
+height: 100px;
+background-color: #e7187f;
+
+
+}
+#nav3{ 
+
+position:relative;
+top:-30px;
+margin-left:0;
+border-radius: 50px;
+width: 100px;
+height: 100px;
+background-color: #1664f3;
+
+
+}
+#nav4{ 
+
+position:relative;
+margin-left:0;
+top:-50px;
+border-radius: 50px;
+width: 100px;
+height: 100px;
+background-color: #67f62f;
+
+
+}
+#nav5{ 
+
+position:relative;
+margin-left:0;
+top:-50px;
+border-radius: 50px;
+width: 100px;
+height: 100px;
+background-color: #67f62f;
+
+
+}
+
+a:link {text-decoration:none;color:white;} 
+a:visited {text-decoration:none;color:white;} 
+
+.text:hover {
+-moz-transform: scale(1.2); 
+-webkit-transform: scale(1.2);
+-o-transform: scale(1.2);  
+transform: scale(1.2);  
+} 
+.pic:hover {
+-moz-transform: scale(1.2); 
+-webkit-transform: scale(1.2);
+-o-transform: scale(1.2);  
+transform: scale(1.2);  
+} 
+.nav:hover{
+-moz-transform: rotate(30deg) scale(1.5);
+-webkit-transform: rotate(30deg)  scale(1.5);
+transform: rotate(30deg) scale(1.5);
+
+  
+}
+
+#banner2:hover{
+-moz-transform: rotate(-3deg) ;
+-webkit-transform: rotate(-3deg) ;
+transform: rotate(-3deg);
+}
+

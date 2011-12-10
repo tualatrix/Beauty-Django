@@ -1,54 +1,41 @@
 
 
 #girlA{
-
+text-align:center;
 border-radius: 20px;
-width: 200px;
-height: 300px;
+width:600px;
+height: 350px;
 position:relative;
 top:100px;
-left:-200px;
+left:-220px;
 -moz-transform: rotate(-3deg) ;
 -webkit-transform: rotate(-3deg) ;
+-o-transform: rotate(3deg) ;
 transform: rotate(-3deg);
-z-index:10;
+
 
 }
-
-
-
-
 #girlB{
-
+text-align:center;
 border-radius: 20px;
-width: 200px;
-height: 300px;
+width:600px;
+height: 350px;
 position:relative;
-top:-200px;
+top:-250px;
 left:200px;
 -moz-transform: rotate(3deg) ;
 -webkit-transform: rotate(3deg) ;
+-o-transform: rotate(3deg) ;
 transform: rotate(3deg);
-z-index:10;
-}
-
-#girlApic:hover{
-
--moz-transform: scale(1.2); 
--webkit-transform: scale(1.2);
--o-transform: scale(1.2);  
-transform: scale(1.2); 
-
 
 }
 
+#girlpic:hover{
 
-#girlBpic:hover{
-
--moz-transform: scale(1.2); 
--webkit-transform: scale(1.2);
--o-transform: scale(1.2);  
-transform: scale(1.2); 
+-moz-transform: scale(1.3) ;
+-webkit-transform: scale(1.3) ;
+-o-transform: scale(1.3) ;
+transform: scale(1.3) ;
 
 }
 
@@ -56,7 +43,7 @@ transform: scale(1.2);
 
 position:relative;
 margin-left:0;
-top:-510px;
+top:-620px;
 left:-20px;
 bottom:120px;
 text-align:left;
@@ -69,11 +56,10 @@ box-shadow: 0px 0px 20px #888888;
 }
 
 body {
-
 height:768px;
 background:url(background.png);
 background-size:100%;
-background-repeat:y-repeat;
+background-repeat:repeat;
 background-position:center center;
 }
 

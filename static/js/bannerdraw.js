@@ -3,6 +3,4 @@
 				$("#banner3").slideDown("slow");
 				$(".bar3text").fadeOut(500);
 				$(".bar3text").slideDown("slow");
-
-				
 			});
