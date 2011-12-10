@@ -1,9 +1,9 @@
+#coding=utf-8
 from django.shortcuts import render_to_response,redirect
 from django import forms
 import os.path
 from facebook.models import facebook
 import random
-
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 def home(request):
@@ -80,13 +80,10 @@ def upload(request):
 
 		fn = f.name
 		print fn
-		aa = request.POST.values()
-		print aa[1]
-		name = facebook.objects.create(name = aa[1],desc=aa[2],filename=fn,rates=0 )
+		aa = request.POST['girlname']
+		bb = request.POST['description']
 
-		print name.name
-		print name.desc
-
+		name = facebook.objects.create(name = aa,desc=bb,filename=fn,rates=0 )
 		
 				
 		

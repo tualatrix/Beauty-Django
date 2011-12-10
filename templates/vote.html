@@ -1,9 +1,19 @@
 {% include 'header.html' %}
 <link rel="stylesheet" href="/static/css/vote.css">
 <script type="text/javascript">
-function alart(){
+function alart1(){
 	
+
+	girlaforma.submit();
 	alert('Hello thanks a lot for choosing me ^^');
+	
+	}
+function alart2(){
+	
+	
+	girlaforma.submit();
+	alert('Hello thanks a lot for choosing me ^^');
+	
 	
 	}
 </script>
@@ -19,14 +29,16 @@ function alart(){
 </header>
 <body>
 
-<aside id="girlA" >
+<aside id="girlA">
+<img src="/media/image/{{ girlA }}"  alt="girla"  height="100%"  id="girlApic" class="pic"  onclick= "alart1(); "  > 
 <form NAME= "girlaforma" action="/vote/" enctype="multipart/form-data" method="post">
-<input name="fileid" value = "{{ file }}" type="image" src="/media/image/{{ girlA }}"  alt="girla"  height="100%"  id="girlApic" class="pic"  onclick= "alart(); "  > 
+<input name="fileid" value = "{{ file }}" type="image" style= "visibility:hidden ">
 </form>
 </aside>
-<aside id="girlB" >
+<aside id="girlB">
+<img src="/media/image/{{ girlB }}"  alt="girlb"  height="100%"  id="girlApic" class="pic"  onclick= "alart2();"  > 
 <form NAME= "girlaformb" action="/vote/" enctype="multipart/form-data" method="post">
-<input name="fileid2" value = "{{ file2 }}" type="image" src="/media/image/{{ girlB }}"  alt="girlb"  height="100%"  id="girlApic" class="pic"  onclick= "alart();"  > 
+<input name="fileid2" value = "{{ file2 }}" type="image" style= "visibility:hidden "> 
 </form>
 </aside>
 
