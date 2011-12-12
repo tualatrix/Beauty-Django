@@ -29,7 +29,10 @@ def vote(request):
 		
 		username = request.COOKIES['csrftoken']
 		username = username[0:20]
-		choose = users.objects.get(name = username)
+		try:
+			choose = users.objects.get(name = username)
+		except:
+			return redirect('/')
 		
 		print choose.filename
 		
@@ -44,7 +47,10 @@ def vote(request):
 	elif '/voteb/' == request.META['PATH_INFO']:
 		username = request.COOKIES['csrftoken']
 		username = username[0:20]
-		choose = users.objects.get(name = username)
+		try:
+			choose = users.objects.get(name = username)
+		except:
+			return redirect('/')
 		girla = facebook.objects.get(id = choose.filename2)
 		print girla.rates
 		print type(girla.rates)

@@ -4,7 +4,7 @@ from django.contrib import admin
 class users(models.Model):
 	""" Class doc """
 	
-	name = models.CharField(max_length=50000)
+	name = models.CharField(max_length=1000)
 	filename = models.CharField(max_length=1000)
 	filename2 = models.CharField(max_length=1000)
 	
