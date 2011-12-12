@@ -11,6 +11,7 @@ box-shadow: 0px 0px 5px #888888;
 position:relative;
 top:70px;
 left:10px;
+
 }
 #nav{ 
 
@@ -28,11 +29,20 @@ text-align:left;
   font-size: 30px;
   position:relative;
   top:30px;
-  width: 580px;
-  height: 300px;
+  width: 650px;
+  height: 350px;
   z-index: 10;
+  overflow-y:scroll;
 
-
+}
+.scrollbar{
+SCROLLBAR-FACE-COLOR: #BED8EB; 
+SCROLLBAR-SHADOW-COLOR: #DDF8FF; 
+SCROLLBAR-HIGHLIGHT-COLOR: #92C0D1; 
+SCROLLBAR-3DLIGHT-COLOR: #DDF8FF; 
+SCROLLBAR-DARKSHADOW-COLOR: #92C0D1; 
+SCROLLBAR-TRACK-COLOR:#BED8EB; 
+SCROLLBAR-ARROW-COLOR: #92C0D1 
 
 }
 img{

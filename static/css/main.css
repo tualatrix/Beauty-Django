@@ -10,7 +10,14 @@ margin:0 auto;
 -moz-transition: all 0.2s ease 0s;
 -webkit-transition: all 0.2s ease 0s;
 transition: all 0.2s ease 0s;
-
+scrollbar-3dlight-color:#D4D0C8; 
+scrollbar-highlight-color:#fff; 
+scrollbar-face-color:#E4E4E4; 
+scrollbar-arrow-color:#666; 
+scrollbar-shadow-color:#808080; 
+scrollbar-darkshadow-color:#D7DCE0; 
+scrollbar-base-color:#D7DCE0; 
+scrollbar-track-color:#;
 
 }
 body {
