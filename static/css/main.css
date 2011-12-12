@@ -15,7 +15,7 @@ transition: all 0.2s ease 0s;
 }
 body {
 
-
+height:768px;
 background:url(background.png);
 background-size:100%;
 background-repeat:no-repeat;
@@ -63,7 +63,7 @@ top:-30px;
 }
 #topcup{
 width: 1000px;
-height: 80px;
+height: 100px;
 overflow:hidden;
 }
 #banner2{
