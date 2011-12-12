@@ -5,6 +5,9 @@ import os.path
 from facebook.models import facebook
 from users.models import users
 import random,string
+import magic
+import shutil
+import os
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 import random,string
@@ -16,13 +19,11 @@ def random_word(num):
     return w
 
 def home(request):
-	sitetitle = 'Beauty around Us'
-	headname = 'Beauty around Us'
+	sitetitle = 'Miss Beauty'
+	headname = 'Miss Beauty'
 	return render_to_response('index.html',locals())	
 
 def vote(request):
-	sitetitle = 'Beauty around Us'
-	headname = 'Beauty around Us'
 	print request.META['PATH_INFO']
 	if '/votea/' == request.META['PATH_INFO']:
 		
@@ -52,7 +53,7 @@ def vote(request):
 		users(id = choose.id ).delete()
 		return redirect('/vote/')
 	else:
-		print "ok"
+
 		list = facebook.objects.order_by('id')
 		all = facebook.objects.order_by('id').count()
 		all = all-1
@@ -81,44 +82,38 @@ def vote(request):
 	
 	
 def upload(request):
-	""" Function doc
-
-	@param PARAM: DESCRIPTION
-	@return RETURN: DESCRIPTION
-	"""
 	if request.method == 'POST':
-		sitetitle = 'Beauty around Us'
-		headname = 'Beauty around Us'
+		sitetitle = 'Miss Beauty'
+		headname = 'Miss Beauty'
 		print request.FILES
 		f = request.FILES['image']
+
 		fn = random_word(20)
 		aa = request.POST['girlname']
 		bb = request.POST['description']
-		name = facebook.objects.create(name = aa,desc=bb,filename=fn,rates=0 )
 		destination = open( PROJECT_PATH +'/media/image/' + fn , 'w')
 		for chunk in f.chunks():
 			destination.write(chunk)
 		destination.close()
+		mime = magic.Magic(mime=True)
+		if mime.from_file(PROJECT_PATH +'/media/image/' + fn ).split("/")[0] == "image":
+			name = facebook.objects.create(name = aa,desc=bb,filename=fn,rates=0 )
+		else:
+			os.remove(PROJECT_PATH +'/media/image/' + fn )
+			return render_to_response('noupload.html',locals())
 		done = str(fn)
 		return render_to_response('uploaded.html',locals())
 		
 		
 		
 	else:
-				
-		sitetitle = 'Beauty around Us'
-		headname = 'Beauty around Us'
 		return render_to_response('upload.html',locals())
 		
 		
 def about(request):
-		sitetitle = 'Beauty around Us'
-		headname = 'Beauty around Us'
 		return render_to_response('about.html',locals())
 
 def top(request):
-		sitetitle = 'Beauty around Us'
-		headname = 'Beauty around Us'
 		list = facebook.objects.order_by('-rates')
 		print list[0].rates
 		no1 = list[0].filename
